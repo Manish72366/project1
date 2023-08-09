@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dukaan</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id = "header" >
+        <h3 class="company-name">Megashop</h3>
+        <div id="search1">
+            <div class="search">
+                <input id = "input" type="text" placeholder="search items">
+                <a href="#" id="search">
+                    <ion-icon id = "icn" name="search"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <!-- bootstrap use to make login and signup buttonas -->
+        <div class="d-grid gap-2 d-md-flex ">
+            <div id="mode" >
+                <ion-icon id = "light" name="sunny" onclick="lightMode()"></ion-icon>
+                <ion-icon id="dark" name="moon-sharp" onclick="darkMode()"></ion-icon>
+            </div>
+            <button class="btn btn-primary me-md-2" type="button">login</button>
+            <button class="btn btn-primary" type="button">SignUp</button>
+        </div>
+    </header>
+    <hr class="line">
+    <nav id = "cnt1" class="container1">
+        <li class="items"> <a href="" class="items1 items-1">Home</a> </li>
+        <li class="items"> <a href="" class="items1 items-2">Electronics</a> </li>
+        <li class="items"> <a href="" class="items1 items-3">Fashion</a> </li>
+        <li class="items"> <a href="" class="items1 items-4">Grocery</a> </li>
+        <li class="items"> <a href="" class="items1 items-5">Top Deals</a> </li>
+        <li class="items"> <a href="" class="items1 items-6"> Customer Services</a></li>
+    </nav>
+    <!--  slider -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" >
+            <img loading="lazy" src="https://codeswear.nyc3.cdn.digitaloceanspaces.com/constants/landing/banner/6.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" >
+            <img loading="lazy" src="https://codeswear.nyc3.cdn.digitaloceanspaces.com/constants/landing/banner/2.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img loading="lazy" src="https://codeswear.nyc3.cdn.digitaloceanspaces.com/constants/landing/banner/3.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img loading="lazy" src="https://codeswear.nyc3.cdn.digitaloceanspaces.com/constants/landing/banner/5.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img loading="lazy" src="https://www.ulcdn.net/media/Slideshow/Simplywud-fhs-Slideshow.jpg?1687846379" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img loading="lazy" src="https://www.ulcdn.net/media/Slideshow/Hob-Slideshow.jpg?1690190810" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!--  bootstrap card -->
+    <div id="crd" >
+    <div class="card" style="width: 18rem;" onmouseup="funcBlur()">
+        <img loading="lazy" src="./photos/girl.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Styles for women</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Click Here</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img loading="lazy" src="./photos/makeup.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Explore Fashion</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Click Here</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img loading="lazy" src="./photos/men.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Men's Style</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Click Here</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img loading="lazy" src="./photos/shop3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">All in one</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Click Here</a>
+        </div>
+    </div>
+</div>
+
+    <div class="banner"></div>
+    <h1>SPORTS</h1>
+    <div class="category">
+      <div class="box1"><img loading="lazy" class="box" src="./photos/cricket.jpg" alt="" srcset=""><div class="content">Cricket</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/football.jpg" alt="" srcset=""><div class="content">Football</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/volleyball.jpg" alt="" srcset=""><div class="content">Volleyball</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/basketball.jpg" alt="" srcset=""><div class="content">Basketball</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/badminton.jpg" alt="" srcset=""><div class="content">Badminton</div></div>
+    </div>
+
+    <h1>ELECTRONICS</h1>
+    <div class="category">
+      <div class="box1"><img loading="lazy" class="box" src="./photos/iphone.jpg" alt="" srcset=""><div class="content">Mobile</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/laptops.jpg" alt="" srcset=""><div class="content">Laptop</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/television.jpg" alt="" srcset=""><div class="content">Television</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/watches.jpg" alt="" srcset=""><div class="content">Watch</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/camera.jpg" alt="" srcset=""><div class="content">Camera</div></div>
+    </div>
+
+    <h1>FASHION</h1>
+    <div class="category">
+      <div class="box1"><img loading="lazy" class="box" src="./photos/shirts.jpg" alt="" srcset=""><div class="content">Shirt</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/jeans.jpg" alt="" srcset=""><div class="content">Jeans</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/tops.jpg" alt="" srcset=""><div class="content">Tops</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/dresses.jpg" alt="" srcset=""><div class="content">Dress</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/shoes.jpg" alt="" srcset=""><div class="content">Shoes</div></div>
+    </div>
+
+    <h1>HOME</h1>
+    <div class="category">
+      <div class="box1"><img loading="lazy" class="box" src="./photos/fridge.jpg" alt="" srcset=""><div class="content">Fridge</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/ac.jpg" alt="" srcset=""><div class="content">A.C.</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/furniture.jpg" alt="" srcset=""><div class="content">Furniture</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/lights.jpg" alt="" srcset=""><div class="content">Light</div></div>
+      <div class="box1"><img loading="lazy" class="box" src="./photos/beds.jpg" alt="" srcset=""><div class="content">Beds</div></div>
+    </div>
+    
+    <footer class="footer-1">
+        <div class="foot" id="foo">
+            <div id="ft">ABOUT</div>
+            <div class="about">Contact Us</div>
+            <div class="about">About Us</div>
+            <div class="about"> Careers</div>
+            <div class="about"> Megashop Stories</div>
+            <div class="about">Press</div>
+            <div class="about">Corporate Information</div>
+        </div>
+        <div class="foot">
+            <div id="ft"> HELP</div>
+            <div class="help"> Payments</div>
+            <div class="help"> Shipping</div>
+            <div class="help"> Cancellation & Returns</div>
+            <div class="help"> Report Infringement</div>
+        </div>
+        <div class="foot">
+            <div id="ft">POLICY</div>
+            <div class="policy">Return Policy</div>
+            <div class="policy"> Terms Of Use</div>
+            <div class="policy">Security</div>
+            <div class="policy"> Privacy</div>
+        </div>
+        <div class="foot">
+            <div id="ft">SOCIAL</div>
+            <div class="social">Facebook</div>
+            <div class="social">Instagram</div>
+            <div class="social"> YouTube</div>
+            <div class="social">Twitter</div>
+        </div>
+    </footer>
+    <hr class="line">
+    <footer class="footer-2">
+        <div class="icons"><img loading="lazy" src="./photos/seller.png" alt="" class="icon">
+            <div class="foot-1">Become a Seller</div>
+        </div>
+        <div class="icons">
+            <img loading="lazy" src="./photos/advertise.png" alt="" class="icon">
+            <div class="foot-1">Advertise</div>
+        </div>
+        <div class="icons">
+            <img loading="lazy" src="./photos/gift.png" alt="" class="icon">
+            <div class="foot-1">Gift Cards</div>
+        </div>
+        <div class="icons">
+            <img loading="lazy" src="./photos/helpcenter.png" alt="" class="icon">
+            <div class="foot-1">Help Center </div>
+        </div>
+    
+        <div class="foot-1"> &#169; 2007-2022 Megashop.com</div>
+        <img loading="lazy" src="./photos/visa.png" alt="" class="img">
+        <img loading="lazy" src="./photos/cashdelivery.png" alt="" class="img">
+        <img loading="lazy" src="./photos/mastercard.png" alt="" class="img">
+        <img loading="lazy" src="./photos/paytm.png" alt="" class="img">
+        <img loading="lazy" src="./photos/rupay.png" alt="" class="img">
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="body.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+</html>
