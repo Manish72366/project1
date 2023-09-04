@@ -55,9 +55,6 @@ html {
     .items1 {
       margin: 0px 0px 10px 0px;
     }
-    .banner {
-      height: 150px;
-    }
     .box {
       width: 250px;
       height: 250px;
@@ -80,9 +77,6 @@ html {
     }
     .items1 {
       margin: 0px 0px 10px 0px;
-    }
-    .banner {
-      height: 100px;
     }
     .box {
       width: 200px;
@@ -171,12 +165,6 @@ header {
       display: none; 
     } */
 }
-.card{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
 
 .search {
     display: flex;
@@ -236,7 +224,9 @@ hr{
     border: none;
 }
 
-.h1 {
+h1 {
+    color: rgb(147 51 234);
+    font-size: 70px;
     margin-top: 0px;
 }
 
@@ -245,12 +235,6 @@ hr{
     justify-content: space-between;
 }
 
-.box {
-    margin: 10px 10px;
-    height: 300px;
-    width: 200px;
-    border-radius: 10px;
-}
 .carousel-control-prev-icon
 {
     /* font-size: 10px; */
@@ -263,19 +247,66 @@ hr{
     background-color: black !important;
     border-radius: 50%;
 }
-#crd{
+.banner{
+    width: 100%;
     display: flex;
+    overflow: hidden;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 20px;
 }
-.card{
-    transition: all;
-    transition-duration: 0.8s;
-    transition-timing-function: ease;
+.banner .txt{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.card:hover{
-    transform: scale3d(1.03, 1.03, 1.03);
+.banner .txt span {
+    color: rgb(147 51 234);
+    font-size: 70px;
+    white-space: nowrap;
+    width: 75%;
+    text-align: center;
+    overflow: hidden;
+    border-right: 3px solid transparent; /* Add a border to simulate the cursor */
+    animation: typing 3s steps(15,end), cursor 0.4s step-end infinite;
+  }
+/* cursor blinking */
+@keyframes cursor {
+    0%, 100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgb(147 51 234); /* Adjust the cursor color here */
+    }
+  }
+/* typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+.banner .txt h3{
+    font-size: 25px;
+}
+.banner .updown{
+    animation-name: infiniteupdown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition: all .3s;
+}
+@keyframes infiniteupdown {
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
 }
 
 
@@ -323,25 +354,6 @@ hr{
     background-color: rgb(147 51 234);
 }
 
-.banner {
-    background-image: url('./photos/banner3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: 20px 0px;
-    height: 200px;
-    transition: all;
-    transition-duration: 400ms;
-    transition-timing-function: ease;
-    border-radius: 10px;
-}
-
-.banner:hover {
-    cursor: pointer;
-    transform: scale3d(0.8, 0.8, 0.8);
-    border-radius: 200px;
-    /* background-size: contain; */
-}
 .category{
     margin-top: 15px;
     display: flex;
@@ -351,15 +363,24 @@ hr{
     overflow: hidden;
 }
 .box1{
-    background-size:cover;
-    transition: all;
-    transition-duration: 400ms;
-}
-.box{
-    margin: 10px 10px;
-   height: 350px;
+    margin: 20px 20px;
+    overflow: hidden;
+    height: 350px;
    width: 350px;
    border-radius: 10px;
+}
+.box{
+   height:350px;
+   width: 350px;
+   background-size:cover;
+   overflow: hidden;
+   transition: all;
+   transition-duration: 400ms;
+}
+.box:hover{
+    cursor: pointer;
+    background-size:cover;
+    transform: scale3d(1.1,1.1,1.1);
 }
 .content{
     overflow: hidden;
@@ -370,10 +391,6 @@ hr{
     font-weight: bold;
     font-size: large;
     text-shadow: 4px 4px 4px black;
-}
-.box1:hover{
-    cursor: pointer;
-    transform: scale3d(1.05 ,1.05,1.05);
 }
 h1{
     margin-top: 15px;

@@ -8,28 +8,9 @@ let input =  document.getElementById("input");
 let icn =  document.getElementById("icn"); 
 let items1 =  document.getElementsByClassName("items1");
 let line = document.getElementsByClassName('line');
-// let slider = document.getElementsByClassName('carousel-item');
-// let area_type = document.getElementsByClassName('area-type');
-// let InitialslidLen = 0;
-// let totalSlidLen = slider.length;
-// console.log(totalSlidLen);
 let len = cards.length;
 const myCarouselElement = document.querySelector('#carousel-item')
-// setInterval(() => {
-//     console.log(InitialslidLen);
-//     slider[InitialslidLen].classList.add("active");
-//     // area_type[InitialslidLen].aria_current="true";
-//     InitialslidLen++;
-//     if(InitialslidLen >= totalSlidLen)
-//     {
-//         for (let i = 1; i < totalSlidLen ; i++)
-//         {
-//             slider[i].classList.remove("active");
-//         }
-//         InitialslidLen = 0;
-//         slider[InitialslidLen].classList.add("active");
-//     }
-// }, 2000);
+
 const lightMode = () =>
 {
     light.style.display = 'none';

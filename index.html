@@ -7,6 +7,7 @@
     <title>Dukaan</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,7 +41,7 @@
         <li class="items"> <a href="" class="items1 items-6"> Customer Services</a></li>
     </nav>
     <!--  slider -->
-    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div data-aos="fade-up" data-aos-duration='2000' id="carouselExampleDark" class="carousel carousel-dark slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -79,82 +80,52 @@
         </button>
       </div>
 
-    <!--  bootstrap card -->
-    <div id="crd" >
-    <div class="card" style="width: 18rem;" onmouseup="funcBlur()">
-        <img loading="lazy" src="./photos/girl.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Styles for women</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Click Here</a>
-        </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-        <img loading="lazy" src="./photos/makeup.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Explore Fashion</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Click Here</a>
-        </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-        <img loading="lazy" src="./photos/men.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Men's Style</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Click Here</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img loading="lazy" src="./photos/shop3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">All in one</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Click Here</a>
-        </div>
+    <!--  banner -->
+    <div data-aos="fade-right" class="banner" >
+      <div class="txt">
+        <span >Buy From Dukaan</span>
+        <h3 >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ea!</h3>
+      </div>
+      <img class = "updown" id="ele1" src="https://cdn.thecodehelp.in/ggudduf7qmr7yvjwtcs1_cd7567153f.svg" alt="" srcset="">
     </div>
 </div>
-
-    <div class="banner"></div>
-    <h1>SPORTS</h1>
-    <div class="category">
-      <div class="box1"><img loading="lazy" class="box" src="./photos/cricket.jpg" alt="" srcset=""><div class="content">Cricket</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/football.jpg" alt="" srcset=""><div class="content">Football</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/volleyball.jpg" alt="" srcset=""><div class="content">Volleyball</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/basketball.jpg" alt="" srcset=""><div class="content">Basketball</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/badminton.jpg" alt="" srcset=""><div class="content">Badminton</div></div>
+    <h1 data-aos="fade-left" >SPORTS</h1>
+    <div  class="category">
+      <div data-aos="fade-right" class="box1"><img loading="lazy" class="box" src="./photos/cricket.jpg" alt="" srcset=""><div class="content">Cricket</div></div>
+      <div data-aos="fade-up" class="box1"><img loading="lazy" class="box" src="./photos/football.jpg" alt="" srcset=""><div class="content">Football</div></div>
+      <div data-aos="fade-left" class="box1"><img loading="lazy" class="box" src="./photos/volleyball.jpg" alt="" srcset=""><div class="content">Volleyball</div></div>
+      <div data-aos="fade-left" class="box1"><img loading="lazy" class="box" src="./photos/basketball.jpg" alt="" srcset=""><div class="content">Basketball</div></div>
+      <div data-aos="fade-right" class="box1"><img loading="lazy" class="box" src="./photos/badminton.jpg" alt="" srcset=""><div class="content">Badminton</div></div>
     </div>
 
-    <h1>ELECTRONICS</h1>
+    <h1 data-aos="fade-left" >ELECTRONICS</h1>
     <div class="category">
-      <div class="box1"><img loading="lazy" class="box" src="./photos/iphone.jpg" alt="" srcset=""><div class="content">Mobile</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/laptops.jpg" alt="" srcset=""><div class="content">Laptop</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/television.jpg" alt="" srcset=""><div class="content">Television</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/watches.jpg" alt="" srcset=""><div class="content">Watch</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/camera.jpg" alt="" srcset=""><div class="content">Camera</div></div>
+      <div data-aos="fade-right" class="box1"><img loading="lazy" class="box" src="./photos/iphone.jpg" alt="" srcset=""><div class="content">Mobile</div></div>
+      <div data-aos="fade-up" class="box1"><img loading="lazy" class="box" src="./photos/laptops.jpg" alt="" srcset=""><div class="content">Laptop</div></div>
+      <div data-aos="fade-left" class="box1"><img loading="lazy" class="box" src="./photos/television.jpg" alt="" srcset=""><div class="content">Television</div></div>
+      <div data-aos="fade-left" class="box1"><img loading="lazy" class="box" src="./photos/watches.jpg" alt="" srcset=""><div class="content">Watch</div></div>
+      <div data-aos="fade-right" class="box1"><img loading="lazy" class="box" src="./photos/camera.jpg" alt="" srcset=""><div class="content">Camera</div></div>
     </div>
 
-    <h1>FASHION</h1>
+    <h1 data-aos="fade-left">FASHION</h1>
     <div class="category">
-      <div class="box1"><img loading="lazy" class="box" src="./photos/shirts.jpg" alt="" srcset=""><div class="content">Shirt</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/jeans.jpg" alt="" srcset=""><div class="content">Jeans</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/tops.jpg" alt="" srcset=""><div class="content">Tops</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/dresses.jpg" alt="" srcset=""><div class="content">Dress</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/shoes.jpg" alt="" srcset=""><div class="content">Shoes</div></div>
+      <div data-aos="fade-right"class="box1"><img loading="lazy" class="box" src="./photos/shirts.jpg" alt="" srcset=""><div class="content">Shirt</div></div>
+      <div data-aos="fade-up" class="box1"><img loading="lazy" class="box" src="./photos/jeans.jpg" alt="" srcset=""><div class="content">Jeans</div></div>
+      <div data-aos="fade-left" class="box1"><img loading="lazy" class="box" src="./photos/tops.jpg" alt="" srcset=""><div class="content">Tops</div></div>
+      <div data-aos="fade-left" class="box1"><img loading="lazy" class="box" src="./photos/dresses.jpg" alt="" srcset=""><div class="content">Dress</div></div>
+      <div data-aos="fade-right" class="box1"><img loading="lazy" class="box" src="./photos/shoes.jpg" alt="" srcset=""><div class="content">Shoes</div></div>
     </div>
 
-    <h1>HOME</h1>
-    <div class="category">
-      <div class="box1"><img loading="lazy" class="box" src="./photos/fridge.jpg" alt="" srcset=""><div class="content">Fridge</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/ac.jpg" alt="" srcset=""><div class="content">A.C.</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/furniture.jpg" alt="" srcset=""><div class="content">Furniture</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/lights.jpg" alt="" srcset=""><div class="content">Light</div></div>
-      <div class="box1"><img loading="lazy" class="box" src="./photos/beds.jpg" alt="" srcset=""><div class="content">Beds</div></div>
+    <h1  data-aos="fade-left" >HOME</h1>
+    <div  class="category">
+      <div data-aos="fade-right" class="box1"><img loading="lazy" class="box" src="./photos/fridge.jpg" alt="" srcset=""><div class="content">Fridge</div></div>
+      <div data-aos="fade-up" class="box1"><img loading="lazy" class="box" src="./photos/ac.jpg" alt="" srcset=""><div class="content">A.C.</div></div>
+      <div data-aos="fade-left" class="box1"><img loading="lazy" class="box" src="./photos/furniture.jpg" alt="" srcset=""><div class="content">Furniture</div></div>
+      <div data-aos="fade-left" class="box1"><img loading="lazy" class="box" src="./photos/lights.jpg" alt="" srcset=""><div class="content">Light</div></div>
+      <div data-aos="fade-right" class="box1"><img loading="lazy" class="box" src="./photos/beds.jpg" alt="" srcset=""><div class="content">Beds</div></div>
     </div>
     
-    <footer class="footer-1">
+    <footer data-aos="fade-left" class="footer-1">
         <div class="foot" id="foo">
             <div id="ft">ABOUT</div>
             <div class="about">Contact Us</div>
@@ -186,7 +157,7 @@
             <div class="social">Twitter</div>
         </div>
     </footer>
-    <hr class="line">
+    <hr data-aos="fade-right" class="line">
     <footer class="footer-2">
         <div class="icons"><img loading="lazy" src="./photos/seller.png" alt="" class="icon">
             <div class="foot-1">Become a Seller</div>
@@ -215,6 +186,14 @@
     <script src="body.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 60,
+        duration: 900,
+        easing: 'ease',
+      });
+    </script>
 </body>
 
 </html>
