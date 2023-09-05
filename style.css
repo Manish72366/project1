@@ -4,7 +4,6 @@ html {
     overflow-x: hidden;
 }
 * {
-    /* overflow-x: hidden; */
     scroll-behavior: smooth;
     margin: 0px;
     padding: 0px;
@@ -188,8 +187,6 @@ header {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    /* background-image: linear-gradient(aliceblue, rgba(170, 249, 224, 0.3)); */
-    /* background-color: rgb(17 ,24 ,39); */
     background-color: white;
     z-index: -1;
     height: 30px;
@@ -201,7 +198,6 @@ header {
     color: black;
 }
 .search a  {
-    /* color: rgb(17 ,24 ,39); */
     color: white;
     font-size: small;
 }
@@ -226,50 +222,44 @@ hr{
 
 h1 {
     color: rgb(147 51 234);
-    font-size: 70px;
+    font-size: 50px;
     margin-top: 0px;
 }
 
-.boxes {
-    display: flex;
-    justify-content: space-between;
-}
 
-.carousel-control-prev-icon
-{
-    /* font-size: 10px; */
-    background-color: black !important;
-    border-radius: 50%;
-}
-.carousel-control-next-icon
-{
-    /* font-size: 10px; */
-    background-color: black !important;
-    border-radius: 50%;
-}
 .banner{
+    margin-top: 0px !important;
+    height:100vh;
+    /* background-color: #7185dc; */
     width: 100%;
     display: flex;
     overflow: hidden;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:space-between;
     margin-top: 20px;
 }
 .banner .txt{
+    margin-left: 7%;
+    width: 35%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     flex-direction: column;
 }
-.banner .txt span {
+.banner .txt div{
+    font-family:  'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(147 51 234);
+    font-size: 60px;
+}
+.banner .txt div span {
     color: rgb(147 51 234);
     font-size: 70px;
     white-space: nowrap;
     width: 75%;
     text-align: center;
     overflow: hidden;
-    border-right: 3px solid transparent; /* Add a border to simulate the cursor */
+    border-right: 3px solid transparent; 
     animation: typing 3s steps(15,end), cursor 0.4s step-end infinite;
   }
 /* cursor blinking */
@@ -279,23 +269,44 @@ h1 {
     }
     50% {
       border-color: rgb(147 51 234); /* Adjust the cursor color here */
-    }
-  }
-/* typing effect */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-}
+     } 
+  } 
+
 .banner .txt h3{
+    flex-wrap: wrap;
     font-size: 25px;
 }
+.banner  .ele{
+    width: 50%;
+    height: 85vh;
+    right: 0px;
+}
 .banner .updown{
+    height: 20vh;
+    width: 20vh;
     animation-name: infiniteupdown;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
     transition: all .3s;
+}
+.ele1{
+    position: absolute;
+    top: 16vh;
+    right: 19vw;
+    z-index: 2;
+}
+.ele2{
+    position: absolute;
+    top: 60vh;
+    right: 30vw;
+    z-index: 2;
+}
+.ele3{
+    position: absolute;
+    top: 58vh;
+    right: 9vw;
+    z-index: 2;
 }
 @keyframes infiniteupdown {
     0%{
@@ -464,17 +475,11 @@ h1{
     color: #7185dc;
 }
 
-#foo {
-    margin-top: 47px;
-}
 
 hr {
-
     height: 0.1px;
-
 }
-/* background-color: #310e68; */
-/* background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%); */
+
 .footer-2 {
     overflow: hidden;
     display: flex;
@@ -490,12 +495,6 @@ hr {
     margin-top: 15px;
     color: white;
 }
-
-
-.img {
-    margin: 13px -30px;
-}
-
 .icon {
     margin-top: 10px;
     height: 30px;
@@ -505,4 +504,7 @@ hr {
 .icons {
     display: flex;
 }
-
+.footer-2 img{
+    height: 40px;
+    width: 40px;
+}

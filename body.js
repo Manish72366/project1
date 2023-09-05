@@ -67,3 +67,74 @@ const darkMode = () =>
     }
 
 }
+// Get references to the links that trigger scrolling
+// Get references to the links that trigger scrolling
+const sportsLink = document.querySelector('.items-2');
+const electronicsLink = document.querySelector('.items-3');
+const fashionLink = document.querySelector('.items-4');
+const groceryLink = document.querySelector('.items-5');
+const aboutLink = document.querySelector('.items-6');
+// Define a function to scroll to a section with custom duration and offset
+function scrollToSection(elementId, duration, offset) {
+    const element = document.querySelector(elementId);
+    const yOffset = element.getBoundingClientRect().top + window.scrollY - offset;
+    const startingY = window.pageYOffset;
+    const diff = yOffset - startingY;
+    let start;
+
+    // Use requestAnimationFrame for smoother animation
+    function step(timestamp) {
+        if (!start) {
+            start = timestamp;
+        }
+
+        const time = timestamp - start;
+        const percentage = Math.min(1, time / duration);
+
+        window.scrollTo(0, startingY + diff * percentage);
+
+        if (time < duration) {
+            requestAnimationFrame(step);
+        }
+    }
+
+    requestAnimationFrame(step);
+}
+// Add click event listeners to the links with custom duration and offset (e.g., 800 milliseconds, 50 pixels)
+sportsLink.addEventListener('click', () => scrollToSection('#sport', 600, 50));
+electronicsLink.addEventListener('click', () => scrollToSection('#electronics', 600, 50));
+fashionLink.addEventListener('click', () => scrollToSection('#fashion', 600, 50));
+groceryLink.addEventListener('click', () => scrollToSection('#grocery', 600, 50 ));
+aboutLink.addEventListener('click', () => scrollToSection('#about', 600,50));
+
+// Type writer effect
+const changingText = document.getElementById("changingText");
+const texts = ["Love", "Manish", "Manku"];
+let currentIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeText() {
+    const currentText = texts[currentIndex];
+    if (isDeleting) {
+        changingText.textContent =  currentText.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        changingText.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(typeText, 1000);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        currentIndex = (currentIndex + 1) % texts.length;
+        setTimeout(typeText, 600);
+    } else {
+        setTimeout(typeText, isDeleting ? 100 : 300);
+    }
+}
+
+typeText();
+
